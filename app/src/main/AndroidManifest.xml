@@ -39,7 +39,7 @@
         <activity
             android:name=".DetalhesCargaHorariaActivity"
             android:configChanges="orientation|screenSize"
-            android:theme="@style/FullscreenTheme" />
+            />
     </application>
 
 </manifest>

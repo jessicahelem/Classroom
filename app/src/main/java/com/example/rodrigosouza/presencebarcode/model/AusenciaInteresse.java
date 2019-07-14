@@ -5,7 +5,7 @@ public class AusenciaInteresse {
     private String ausencia;
     private String hora_inicio;
     private String hora_fim;
-    private static int peso;
+    private static int peso = 2;
     private Boolean status;
     private String interessado;
 

@@ -14,11 +14,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class DetalhesCargaHorariaActivity extends AppCompatActivity {
-    public int carga_horaria_h;
-    public int horas_restantes = 0;
-    public int horas_antecipadas = 0;
-    public int horas_ministradas =0;
-    public int horas_ausencias = 0;
+    public int carga_horaria_h= 60;
+    public int horas_restantes;
+    public int horas_antecipadas = 2;
+    public int horas_ministradas=20;
+    public int horas_ausencias= 2;
     public TextView txt_carga_horaria;
     public TextView txt_horas_antecipadas;
     public TextView txt_horas_ausentes;
@@ -42,11 +42,8 @@ public class DetalhesCargaHorariaActivity extends AppCompatActivity {
         txt_hora_total = findViewById(R.id.input_hora_total);
 
 
+        //mostrarCargahoraria();
 
-
-    }
-
-    public void mostrarCargahoraria(){
         Turma  turma = new Turma();
         DeclaracaoAusencia ausencia = new DeclaracaoAusencia();
         AusenciaInteresse antecipadas = new AusenciaInteresse();
@@ -58,17 +55,38 @@ public class DetalhesCargaHorariaActivity extends AppCompatActivity {
         horas_restantes = (carga_horaria_h - hora_total);
 
 
-        txt_carga_horaria.setText(carga_horaria_h);
-        txt_horas_ministradas.setText(horas_ministradas);
-        txt_horas_ausentes.setText(horas_ausencias);
-        txt_horas_antecipadas.setText(horas_antecipadas);
-        txt_horas_restantes.setText(horas_restantes);
-        txt_hora_total.setText(hora_total);
-
-
+        txt_carga_horaria.setText(String.valueOf(carga_horaria_h));
+        txt_horas_ministradas.setText(String.valueOf(horas_ministradas));
+        txt_horas_ausentes.setText(String.valueOf(horas_ausencias));
+        txt_horas_antecipadas.setText(String.valueOf(horas_antecipadas));
+        txt_horas_restantes.setText(String.valueOf(horas_restantes));
+        txt_hora_total.setText(String.valueOf(hora_total));
 
     }
 
+//    public void mostrarCargahoraria(){
+//        Turma  turma = new Turma();
+//        DeclaracaoAusencia ausencia = new DeclaracaoAusencia();
+//        AusenciaInteresse antecipadas = new AusenciaInteresse();
+//        horas_antecipadas = antecipadas.getPeso();
+//        horas_ausencias = ausencia.getPeso();
+//        horas_ministradas = turma.getAulas_ministradas();
+//        carga_horaria_h = turma.getCarga_horaria();
+//        hora_total = horas_ministradas + horas_antecipadas;
+//        horas_restantes = (carga_horaria_h - hora_total);
+//
+//
+//        txt_carga_horaria.setText(carga_horaria_h);
+//        txt_horas_ministradas.setText(horas_ministradas);
+//        txt_horas_ausentes.setText(horas_ausencias);
+//        txt_horas_antecipadas.setText(horas_antecipadas);
+//        txt_horas_restantes.setText(horas_restantes);
+//        txt_hora_total.setText(hora_total);
+//
+//
+//
+//    }
+//
 
 
 

@@ -7,7 +7,7 @@ public class DeclaracaoAusencia {
     private String professor;
     private String turma;
     private String horario;
-    private int peso;
+    private int peso = 2;
     private String data_falta;
     private String data_declaracao;
 

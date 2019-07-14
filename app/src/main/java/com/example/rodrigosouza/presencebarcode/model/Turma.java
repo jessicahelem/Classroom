@@ -4,11 +4,13 @@ import android.widget.TextView;
 
 public class Turma {
     private String especificacao_disciplina;
-    private int carga_horaria;
+    private int carga_horaria = 60;
     private String ministrante;
     private String disciplina;
     private String curso;
-    private int aulas_ministradas;
+    private int aulas_ministradas = 20;
+
+
     public Turma(){
 
     }
